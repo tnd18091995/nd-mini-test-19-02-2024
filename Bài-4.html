@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function laSoNguyenTo(number) {
+        let count = 0 ;
+        if(number < 2){
+            return false;
+        }
+        for (let i = 1; i <= number ; i++) {
+            if(number % i === 0){
+                count++
+            }
+        }
+        return count === 2;
+    }
+    function tongSoNguyenTo() {
+        let tong = 0;
+        for (let i = 2; i < 500; i++) {
+            if (laSoNguyenTo(i)) {
+                tong += i;
+            }
+        }
+        return tong;
+    }
+    document.write(tongSoNguyenTo())
+    console.log("Tổng các số nguyên tố nhỏ hơn 500 là:", tongSoNguyenTo());
+
+</script>
+</body>
+</html>

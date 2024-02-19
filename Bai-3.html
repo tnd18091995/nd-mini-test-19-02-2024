@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputArray = prompt("Nhập các phần tử của mảng, cách nhau bằng dấu phẩy (ví dụ: 1,2,3,4):");
+    let arr = inputArray.split(",").map(item => parseInt(item));
+    function SNT(number) {
+        let count = 0 ;
+        if(number < 2){
+            return false;
+        }
+        for (let i = 1; i <= number ; i++) {
+            if(number % i === 0){
+                count++
+            }
+        }
+        return count === 2;
+    }
+    function sumSNT() {
+        let tong = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (SNT(i)) {
+                tong += i;
+            }
+        }
+        return tong;
+    }
+    console.log(sumSNT())
+</script>
+</body>
+</html>

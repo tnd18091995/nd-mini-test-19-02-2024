@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    function demSoChan(arr) {
+        let dem = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                dem++;
+            }
+        }
+        return dem;
+    }
+    let mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    document.write(demSoChan(mang));
+</script>
+</body>
+</html>

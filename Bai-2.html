@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function demPhanTu(arr, phanTu) {
+        let dem = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === phanTu) {
+                dem++;
+            }
+        }
+        return dem;
+    }
+    let inputArray = prompt("Nhập các phần tử của mảng, cách nhau bằng dấu phẩy (ví dụ: 1,2,3,4):");
+    let array = inputArray.split(",").map(item => parseInt(item));
+    let phanTuCanDem = parseInt(prompt("Nhập phần tử cần đếm:"));
+    let ketQua = demPhanTu(array, phanTuCanDem);
+    console.log(`Số lần xuất hiện của phần tử ${phanTuCanDem} trong mảng là: ${ketQua}`);
+</script>
+</body>
+</html>
